@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>learn lisp</title>
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+
+<body>
+  <center>
+    <h1>LISP - Program type</h1>
+  </center>
+
+  <h3>LISP expressions are called symbolic expressions or s-expressions. The s-expressions are composed of three valid objects: atoms, lists and strings.</h3>
+  <br />
+  <h1> Basic Building Blocks in LISP </h1>
+  <ul>
+    <li>
+      <details>
+        <summary>atom</summary>
+        <p> An atom is a number or string of contiguous characters. It includes numbers and special characters. </p>
+        <pre>
+          hello-itsvinayak
+          name
+          123008907
+          Block#221
+          abc123
+        </pre>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>list</summary>
+        <p>A list is a sequence of atoms and/or other lists enclosed in parentheses. </p>
+        <pre>
+          ( i am a list)
+          (a ( a b c) d e fgh)
+          (vinayak sharma ( CSE 3 year))
+          (sun mon tue wed thur fri sat)
+          ( )
+        </pre>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>string</summary>
+        <p> A string is a group of characters enclosed in double quotation marks. </p>
+        <pre>
+          " I am a string"
+          "a ba c d efg #$%^&!"
+          "Please enter the following details :"
+         </pre>
+      </details>
+    </li>
+  </ul>
+
+  <h1> hello world program example </h1>
+  Create a file named filename.lisp and type the following code into it.<br/>
+  &nbsp;&nbsp;&nbsp;<code> (write-line "hello world")</code><br/>
+
+  compile it using <b>clisp filename.lisp</b> in cmd/terminal
+
+
+
+  <a href="Data_Types.html" class="button" >Next page >></a>
