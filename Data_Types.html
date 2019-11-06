@@ -15,79 +15,149 @@
   <h2>LISP data types can be categorized as.</h2>
   <ul>
     <li><b>Scalar types</b> − for example, number types, characters, symbols etc.</li>
-    <li><b>Data structures</b> -  for example, lists, vectors, bit-vectors, and strings.
+    <li><b>Data structures</b> - for example, lists, vectors, bit-vectors, and strings.
   </ul>
 
   <h2>Type Specifiers in LISP</h2>
   <p>Type specifiers are system-defined symbols for data types.</p>
-  <br/>
+  <br />
   <center>
-  <table  style="text-align:center;">
-    <tr>
-      <td>array</td>
-      <td>fixnum</td>
-      <td>package</td>
-      <td>simple-string</td>
-    </tr>
-    <tr>
-      <td>atom</td>
-      <td>float</td>
-      <td>pathname</td>
-      <td>simple-vector</td>
-    </tr>
-    <tr>
-      <td>bignum</td>
-      <td>function</td>
-      <td>random-state</td>
-      <td>single-float</td>
-    </tr>
-    <tr>
-      <td>bit</td>
-      <td>hash-table</td>
-      <td>ratio</td>
-      <td>standard-char</td>
-    </tr>
-    <tr>
-      <td>bit-vector</td>
-      <td>integer</td>
-      <td>rational</td>
-      <td>stream</td>
-    </tr>
-    <tr>
-      <td>character</td>
-      <td>keyword</td>
-      <td>readtable</td>
-      <td>string</td>
-    </tr>
-    <tr>
-      <td>[common]</td>
-      <td>list</td>
-      <td>sequence</td>
-      <td>[string-char]</td>
-    </tr>
-    <tr>
-      <td style="width:25%;">compiled-function</td>
-      <td>long-float</td>
-      <td>short-float</td>
-      <td>symbol</td>
-    </tr>
-    <tr>
-      <td>complex</td>
-      <td>nill</td>
-      <td>signed-byte</td>
-      <td>t</td>
-    </tr>
-    <tr>
-      <td>cons</td>
-      <td>null</td>
-      <td>simple-array</td>
-      <td>unsigned-byte</td>
-    </tr>
-    <tr>
-      <td>double-float</td>
-      <td>number</td>
-      <td style="width:24%;">simple-bit-vector</td>
-      <td>vector</td>
-    </tr>
-  </table>
-</center>
+    <table style="text-align:center;">
+      <tr>
+        <td>array</td>
+        <td>fixnum</td>
+        <td>package</td>
+        <td>simple-string</td>
+      </tr>
+      <tr>
+        <td>atom</td>
+        <td>float</td>
+        <td>pathname</td>
+        <td>simple-vector</td>
+      </tr>
+      <tr>
+        <td>bignum</td>
+        <td>function</td>
+        <td>random-state</td>
+        <td>single-float</td>
+      </tr>
+      <tr>
+        <td>bit</td>
+        <td>hash-table</td>
+        <td>ratio</td>
+        <td>standard-char</td>
+      </tr>
+      <tr>
+        <td>bit-vector</td>
+        <td>integer</td>
+        <td>rational</td>
+        <td>stream</td>
+      </tr>
+      <tr>
+        <td>character</td>
+        <td>keyword</td>
+        <td>readtable</td>
+        <td>string</td>
+      </tr>
+      <tr>
+        <td>[common]</td>
+        <td>list</td>
+        <td>sequence</td>
+        <td>[string-char]</td>
+      </tr>
+      <tr>
+        <td style="width:25%;">compiled-function</td>
+        <td>long-float</td>
+        <td>short-float</td>
+        <td>symbol</td>
+      </tr>
+      <tr>
+        <td>complex</td>
+        <td>nill</td>
+        <td>signed-byte</td>
+        <td>t</td>
+      </tr>
+      <tr>
+        <td>cons</td>
+        <td>null</td>
+        <td>simple-array</td>
+        <td>unsigned-byte</td>
+      </tr>
+      <tr>
+        <td>double-float</td>
+        <td>number</td>
+        <td style="width:24%;">simple-bit-vector</td>
+        <td>vector</td>
+      </tr>
+    </table>
+  </center>
+
+  <br />
+  <br />
+  <h2>The type-of function returns the data type of a given object.</h2>
+
+  <h1>Examples</h1>
+
+
+  <b> program :</b>
+  <pre>
+          (setq x 10)
+          (setq y 34.567)
+          (setq ch nil)
+          (setq n 123.78)
+          (setq bg 11.0e+4)
+          (setq r 124/2)
+
+          (print x)
+          (print y)
+          (print n)
+          (print ch)
+          (print bg)
+          (print r)
+</pre>
+
+  <b>output :</b>
+
+  <pre>
+            10
+            34.567
+            123.78
+            NIL
+            110000.0
+            62
+</pre>
+
+
+  <b> program :</b>
+  <pre>
+          (defvar x 10)
+          (defvar y 34.567)
+          (defvar ch nil)
+          (defvar n 123.78)
+          (defvar bg 11.0e+4)
+          (defvar r 124/2)
+
+          (print (type-of x))
+          (print (type-of y))
+          (print (type-of n))
+          (print (type-of ch))
+          (print (type-of bg))
+          (print (type-of r))
+</pre>
+
+  <b>output :</b>
+
+  <pre>
+          (INTEGER 0 281474976710655)
+          SINGLE-FLOAT
+          SINGLE-FLOAT
+          NULL
+          SINGLE-FLOAT
+          (INTEGER 0 281474976710655)
+</pre>
+
+
+  <a href="example.html" class="button">More example >></a>
+</body>
+
+</html>

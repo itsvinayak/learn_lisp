@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>learn lisp</title>
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+
+
+<body>
+  <h1> Global Variables </h1>
+
+  <p>
+    Global variables have permanent values throughout the LISP system and remain in effect until a new value is specified.
+    <br/>
+    Global variables are generally declared using the <b>defvar</b> construct.
+</p>
+
+<details>
+  <summary>For example</summary>
+  <pre>
+    (defvar x 24)
+    (print x)
+  </pre>
+</details>
+
+<details>
+<summary>  <b> setq : </b> The defvar special form is similar to setq in that it sets the value of a variable. It is unlike setq in two ways: first, it only sets the value of the variable if the variable does not already have a value. If the variable already has a value, defvar does not override the existing value.</summary>
+
+  <pre>
+    (setq x 10)
+    (setq y 20)
+    (format t "x = ~2d y = ~2d ~%" x y)
+
+    (setq x 100)
+    (setq y 200)
+    (format t "x = ~2d y = ~2d" x y)
+  </pre>
+  <br/>
+  <pre>
+    x = 10 y = 20
+    x = 100 y = 200
+  </pre>
+
+</details>
+
+<br/>
+<br/>
+<hr/>
+
+<br/>
+<br/>
+
+<h1>Local Variables</h1>
+
+Local variables are defined within a given procedure. The parameters named as arguments within a function definition are also local variables.
+<br/>Local variables are accessible only within the respective function.
+<br/>
+Like the global variables, local variables can also be created using the setq construct.
+<br/>
+There are two other constructs - <b>let</b> and <b>prog</b> for creating local variables.
+
+<b>let</b>
+<pre>
+    (let ((x '10) (y 'b)(z 'c))
+    (format t "x = ~a y = ~a z = ~a" x y z))
+</pre>
+
+<pre>
+    x = 10 y = B z = C
+</pre>
+
+The prog construct also has the list of local variables as its first argument, which is followed by the body of the prog, and any number of s-expressions.
+<br/>
+The prog function executes the list of s-expressions in sequence and returns nil unless it encounters a function call named return. Then the argument of the return function is evaluated and returned.
+
+<pre>
+    (prog ((x '(a b c))(y '(1 2 3))(z '(p q 10)))
+    (format t "x = ~a y = ~a z = ~a" x y z))
+</pre>
+
+<br/>
+<br/>
+<br/>
+<a href="input.html" class="button" >Next page >></a>
+</body>
+
+</html>

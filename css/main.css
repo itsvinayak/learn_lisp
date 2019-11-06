@@ -18,3 +18,10 @@ h1{
   color: black;
   padding: 7px;
 }
+
+pre{
+  background: #eefcfc;
+  border: 1px solid black;
+  margin: 2px;
+  padding: 30px;
+}

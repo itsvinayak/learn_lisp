@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>learn lisp</title>
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+
+
+<body>
+  <h1>function</h1>
+
+  The defun construct is used for defining a function.
+  <br/>
+  <b> program to find area</b>
+  <pre>
+    (defun area(s)
+       (format t "Area =  ~f" (* s s)))
+
+    (area 4)
+  </pre>
+  <b> output </b>
+  <pre>
+    Area =  16.0
+
+  </pre>
+
+  <b> program to find max and min </b>
+  <pre>
+    (defun find_max_min(a b)
+       (format t "max = ~a" (max a b))
+       (format t "~%min = ~a" (min a b))
+    )
+
+    (find_max_min 22 4)
+  </pre>
+
+
+
+
+
+<br/>
+<br/>
+<br/>
+<a href="input.html" class="button" >Next page >></a>
+</body>
+
+</html>
