@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>learn lisp</title>
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+
+<body>
+  <center>
+    <h1>Decision Making</h1>
+  </center>
+
+  <h4>LISP provides following types of decision making constructs. Click the following to check their detail.</h4>
+
+  <ul>
+    <li>
+      <details>
+        <summary>cond</summary>
+        <p>This construct is used for used for checking multiple test-action clauses. It can be compared to the nested if statements in other programming languages.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>if</summary>
+        <p>The if construct has various forms. In simplest form it is followed by a test clause, a test action and some other consequent action(s). If the test clause evaluates to true, then the test action is executed otherwise, the consequent
+          clause is evaluated.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>when</summary>
+        <p>In simplest form it is followed by a test clause, and a test action. If the test clause evaluates to true, then the test action is executed otherwise, the consequent clause is evaluated.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>case</summary>
+        <p>This construct implements multiple test-action clauses like the cond construct. However, it evaluates a key form and allows multiple action clauses based on the evaluation of that key form.</p>
+      </details>
+    </li>
+  </ul>
+
+
+  <h3> using if </h3>
+  <b> basic syntax </b><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>(if (test-clause) (action1) (action2))</code><br />
+  <b>example :</b>
+  <pre>
+    (defun maxm(a b)
+           (if (> a b)
+              (format t "~d is big ~%" a) ;if statement
+              (format t "~d is big ~%" b) ; else statement
+           )
+    )
+
+
+    (maxm (read) (read))
+
+  </pre>
+  <b> output :</b>
+  <pre>
+    5 6
+    6 is big
+  </pre>
+  <br />
+  <hr />
+  <br />
+  <b>example : The if clause can be followed by an optional then clause.</b>
+  <pre>
+    (setq a 10)
+    (if (> a 20)
+       then (format t "~% a is less than 20"))
+    (format t "~% value of a is ~d " a)
+  </pre>
+  <b>output</b>
+  <pre>
+    a is less than 20
+    value of a is 10
+  </pre>
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <hr />
+  <h3> using case </h3>
+  <b> basic syntax </b><br />
+  <br />
+  <code>
+    (case (keyform)<br />
+    ((key1) (action1 action2 ...) )<br />
+    ((key2) (action1 action2 ...) )<br />
+    ...<br />
+    ((keyn) (action1 action2 ...) ))<br />
+  </code>
+  <br/>
+  <br/>
+
+  <b>example : </b>
+  <pre>
+    (setq day 4)
+    (case day
+    (1 (format t "~% Monday"))
+    (2 (format t "~% Tuesday"))
+    (3 (format t "~% Wednesday"))
+    (4 (format t "~% Thursday"))
+    (5 (format t "~% Friday"))
+    (6 (format t "~% Saturday"))
+    (7 (format t "~% Sunday")))
+  </pre>
+  <b>output :</b>
+  <pre>
+    Thursday
+  </pre>
+  <br />
+  <br />
+  <br />
+  <a href="loop.html" class="button">Next page >></a>
+</body>
+
+</html>

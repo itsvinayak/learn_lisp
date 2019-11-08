@@ -9,31 +9,107 @@
 
 <body>
   <center>
-    <h1>if </h1>
+    <h1>Loops</h1>
   </center>
-  <b>example :</b>
-  <pre>
-    (defun maxm(a b)
-           (if (> a b)
-              (format t "~d is big ~%" a)
-              (format t "~d is big ~%" b)
-           )
-    )
+
+  <h4>LISP provides the following types of constructs to handle looping requirements</h4>
+
+  <ul>
+    <li>
+      <details>
+        <summary>loop</summary>
+        <p>The loop construct is the simplest form of iteration provided by LISP. In its simplest form, it allows you to execute some statement(s) repeatedly until it finds a return statement.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>loop for</summary>
+        <p>The loop for construct allows you to implement a for-loop like iteration as most common in other languages.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>do</summary>
+        <p>The do construct is also used for performing iteration using LISP. It provides a structured form of iteration.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>dotimes</summary>
+        <p>The dotimes construct allows looping for some fixed number of iterations.</p>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>dolist</summary>
+        <p>The dolist construct allows iteration through each element of a list.</p>
+      </details>
+    </li>
+  </ul>
 
 
-    (maxm (read) (read))
 
-  </pre>
-  <b> output :</b>
-  <pre>
-    5 6
-    6 is big
-  </pre>
+<h2>loop</h2>
+<h3>The loop construct is the simplest form of iteration provided by LISP. In its simplest form It allows you to execute some statement(s) repeatedly until it finds a return statement.</h3>
 
-  <br/>
-  <br/>
-  <br/>
-  <a href="input.html" class="button" >Next page >></a>
+<b> basic syntax</b><br/>
+<code>(loop (s-expressions))</code>
+<pre>
+  (setq a 10)
+  (loop
+     (setq a (+ a 1))
+     (write a)
+     (terpri)
+     (when (> a 17) (return a))
+  )
+</pre>
+<pre>
+  11
+  12
+  13
+  14
+  15
+  16
+  17
+  18
+</pre>
+<b> example :</b>
+<pre>
+  (defun  table(n)
+     (setq ans 1)
+     (setq a 1)
+     (loop
+       (setq ans (* a n))
+       (format t "~% ~d * ~d = ~d" n a ans)
+       (setq a (+ a 1))
+      (when (= a 10) (return))
+     )
+  )
+
+
+  (table (read))
+</pre>
+
+<pre>
+  5
+
+ 5 * 1 = 5
+ 5 * 2 = 10
+ 5 * 3 = 15
+ 5 * 4 = 20
+ 5 * 5 = 25
+ 5 * 6 = 30
+ 5 * 7 = 35
+ 5 * 8 = 40
+ 5 * 9 = 45
+
+</pre>
+
+
+<br />
+<br />
+<br />
+<a href="end.html" class="button">Next page >></a>
 </body>
 
 </html>
